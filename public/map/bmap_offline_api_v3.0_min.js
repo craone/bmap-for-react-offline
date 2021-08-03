@@ -6572,6 +6572,7 @@ window.BMAP_AUTHENTIC_KEY = "";
     od.getTilesUrl = function(a, b) {
         var c = a.x
           , e = a.y;
+          // TODO satelliteBorder picture offline logic
         return (jd[Math.abs(c + e) % jd.length] + "u=x=" + c + ";y=" + e + ";z=" + b + ";v=009;type=sate&fm=46&udt=" + Sb("satellite")).replace(/-(\d+)/gi, "M$1")
     }
     ;
@@ -6588,6 +6589,7 @@ window.BMAP_AUTHENTIC_KEY = "";
         var c = a.x
           , e = a.y
           , f = Sb("satelliteStreet");
+          // TODO satelliteStreet offline pricture logic 
         return (kd[Math.abs(c + e) % kd.length] + "?qt=vtile&x=" + (c + "").replace(/-/gi, "M") + "&y=" + (e + "").replace(/-/gi, "M") + "&z=" + b + "&styles=sl" + (6 == z.ca.ia ? "&color_dep=32&colors=50" : "") + "&udt=" + f).replace(/-(\d+)/gi, "M$1")
     }
     ;
